@@ -1,0 +1,37 @@
+
+<html>
+<head>
+    <title>Button Click Events</title>
+</head>
+
+<body>
+
+    <p id="text">Hello, this is some text!</p>
+
+    <button id="fontBtn">Change Font Size</button>
+    <button id="colorBtn">Change Background Color</button>
+    <button id="imageBtn">Change Image</button>
+
+    <br><br>
+
+    <img id="myImage" src="image1.jpg" width="300" style="margin: 20px;">
+
+    <script>
+        // Change font size
+        document.getElementById("fontBtn").onclick = function() {
+            document.getElementById("text").style.fontSize = "30px";
+        };
+
+        // Change background color
+        document.getElementById("colorBtn").onclick = function() {
+            document.body.style.backgroundColor = "lightblue";
+        };
+
+        // Change image
+        document.getElementById("imageBtn").onclick = function() {
+            document.getElementById("myImage").src = "image2.jpg";
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<script>
+let num1 = Number(prompt("Enter the first number:"));
+let operator = prompt("Enter an operator (+, -, *, /):");
+let num2 = Number(prompt("Enter the second number:"));
+
+let result;
+
+switch (operator) {
+    case "+":
+        result = num1 + num2;
+        break;
+
+    case "-":
+        result = num1 - num2;
+        break;
+
+    case "*":
+        result = num1 * num2;
+        break;
+
+    case "/":
+        result = num2 === 0 ? "Cannot divide by zero" : num1 / num2;
+        break;
+
+    default:
+        result = "Invalid operator";
+}
+
+alert("Result: " + result);
+</script>
+
+</body>
+</html>

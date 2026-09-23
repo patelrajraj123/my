@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Converter</title>
+</head>
+<body>
+
+    <h2>Case Converter</h2>
+
+    <input type="text" id="inputText" placeholder="Enter text">
+
+    <br><br>
+
+    <button onclick="toUpper()">UPPERCASE</button>
+    <button onclick="toLower()">lowercase</button>
+
+    <p id="result"></p>
+
+    <script>
+        function toUpper() {
+            let text = document.getElementById("inputText").value;
+            document.getElementById("result").innerHTML = text.toUpperCase();
+        }
+
+        function toLower() {
+            let text = document.getElementById("inputText").value;
+            document.getElementById("result").innerHTML = text.toLowerCase();
+        }
+    </script>
+
+</body>
+</html>

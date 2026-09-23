@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Example</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 50px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Move the box */
+        .translate {
+            transform: translate(50px, 20px);
+        }
+
+        /* Rotate the box */
+        .rotate {
+            transform: rotate(45deg);
+        }
+
+        /* Make the box bigger */
+        .scale {
+            transform: scale(1.5);
+        }
+
+        /* Multiple transformations */
+        .transform {
+            transform: translate(30px, 20px) rotate(20deg) scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box translate">Translate</div>
+
+    <div class="box rotate">Rotate</div>
+
+    <div class="box scale">Scale</div>
+
+    <div class="box transform">Transform</div>
+
+</body>
+</html>

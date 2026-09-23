@@ -1,0 +1,57 @@
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+let age = prompt("Enter your age:");
+
+if (age >= 18) {
+    document.writeln("You are an adult.");
+} else {
+    document.writeln("You are a minor.");
+}
+
+
+
+// Check Number
+
+let number = prompt("Enter a number:");
+
+if (number > 0) {
+    document.writeln("Positive number<br>");
+} else if (number < 0) {
+    document.writeln("Negative number<br>");
+} else {
+    document.writeln("Zero<br>");
+}
+
+
+// Check Marks
+
+let marks = prompt("Enter your marks:");
+
+if (marks >= 90) {
+    document.writeln("Grade A<br>");
+} else if (marks >= 75) {
+    document.writeln("Grade B<br>");
+} else if (marks >= 50) {
+    document.writeln("Grade C<br>");
+} else {
+    document.writeln("Fail<br>");
+}
+
+//average
+
+let mark1 = Number(prompt("Enter first mark:"));
+let mark2 = Number(prompt("Enter second mark:"));
+let mark3 = Number(prompt("Enter third mark:"));
+
+let average = (mark1 + mark2 + mark3) / 3;
+
+document.writeln("Average = " + average);
+</script>
+
+</body>
+</html>
