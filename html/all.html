@@ -1,87 +1,983 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- HTML Document Information -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Form</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background-color: lightgray;
-        }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-        .form-box {
-            width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-        }
+    <meta name="description"
+          content="Complete HTML Practical Program">
 
-        h2 {
-            text-align: center;
-            color: blue;
-        }
+    <meta name="author"
+          content="Student">
 
-        label {
-            display: block;
-            margin-top: 10px;
-        }
+    <title>Complete HTML Program</title>
 
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="form-box">
+    <!-- ================= HEADER ================= -->
 
-        <h2>Student Registration Form</h2>
+    <header>
 
-        <form>
+        <h1>My HTML Website</h1>
 
-            <label for="studentName">Student Name:</label>
-            <input type="text" id="studentName" placeholder="Enter your name">
+        <p>Complete HTML Practical Program</p>
 
-            <label for="studentEmail">Email:</label>
-            <input type="email" id="studentEmail" placeholder="Enter your email">
+        <!-- Navigation -->
+        <nav>
 
-            <label for="studentPassword">Password:</label>
-            <input type="password" id="studentPassword" placeholder="Enter password">
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#list">Lists</a> |
+            <a href="#table">Table</a> |
+            <a href="#form">Form</a> |
+            <a href="#media">Media</a> |
+            <a href="#contact">Contact</a>
 
-            <label for="studentMobile">Mobile Number:</label>
-            <input type="tel" id="studentMobile" placeholder="Enter mobile number">
+        </nav>
 
-            <label for="studentDob">Date of Birth:</label>
-            <input type="date" id="studentDob" title="Date of Birth" placeholder="YYYY-MM-DD">
+    </header>
 
-            <label>Gender:</label>
-            <label for="genderMale">Male</label> <input type="radio" id="genderMale" name="gender" title="Male" value="male">
-            <label for="genderFemale">Female</label> <input type="radio" id="genderFemale" name="gender" title="Female" value="female">
+    <hr>
 
-            <label for="studentCourse">Course:</label>
-            <select id="studentCourse" title="Course">
-                <option>Select Course</option>
-                <option>BCA</option>
-                <option>BBA</option>
-                <option>B.Com</option>
-                <option>MCA</option>
-            </select>
 
-            <label for="studentAddress">Address:</label>
-            <textarea id="studentAddress" rows="4" placeholder="Enter your address"></textarea>
+    <!-- ================= MAIN ================= -->
 
-            <input type="submit" value="Submit">
+    <main>
 
-        </form>
 
-    </div>
+        <!-- ================= HOME ================= -->
+
+        <section id="home">
+
+            <h2>HTML Introduction</h2>
+
+            <p>
+                HTML stands for
+                <strong>HyperText Markup Language</strong>.
+                It is used to create the structure of web pages.
+            </p>
+
+            <!-- Headings -->
+
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+
+            <!-- Paragraph -->
+
+            <p>
+                This is a paragraph.
+                HTML is used to create websites.
+            </p>
+
+
+            <!-- Text Formatting -->
+
+            <h3>Text Formatting</h3>
+
+            <p>
+
+                <b>Bold Text</b>
+                <br>
+
+                <strong>Strong Text</strong>
+                <br>
+
+                <i>Italic Text</i>
+                <br>
+
+                <em>Emphasized Text</em>
+                <br>
+
+                <u>Underlined Text</u>
+                <br>
+
+                <mark>Highlighted Text</mark>
+                <br>
+
+                <small>Small Text</small>
+                <br>
+
+                <del>Deleted Text</del>
+                <br>
+
+                <ins>Inserted Text</ins>
+                <br>
+
+                H<sub>2</sub>O
+                <br>
+
+                X<sup>2</sup>
+
+            </p>
+
+
+            <!-- Line Break -->
+
+            <p>
+                Line 1
+                <br>
+                Line 2
+                <br>
+                Line 3
+            </p>
+
+
+            <!-- Horizontal Line -->
+
+            <hr>
+
+        </section>
+
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about">
+
+            <h2>About</h2>
+
+            <!-- Image -->
+
+            <h3>Image</h3>
+
+            <img
+                src="https://via.placeholder.com/300"
+                alt="Sample Image"
+                width="300"
+                height="200">
+
+
+            <br><br>
+
+
+            <!-- Link -->
+
+            <h3>Hyperlink</h3>
+
+            <a href="https://www.google.com"
+               target="_blank">
+
+                Visit Google
+
+            </a>
+
+
+            <br><br>
+
+
+            <!-- Email Link -->
+
+            <a href="mailto:student@example.com">
+
+                Send Email
+
+            </a>
+
+
+            <br><br>
+
+
+            <!-- Telephone Link -->
+
+            <a href="tel:+911234567890">
+
+                Call Us
+
+            </a>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= LISTS ================= -->
+
+        <section id="list">
+
+            <h2>HTML Lists</h2>
+
+
+            <!-- Ordered List -->
+
+            <h3>Ordered List</h3>
+
+            <ol>
+
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+
+            </ol>
+
+
+            <!-- Unordered List -->
+
+            <h3>Unordered List</h3>
+
+            <ul>
+
+                <li>Python</li>
+                <li>Java</li>
+                <li>PHP</li>
+                <li>C++</li>
+
+            </ul>
+
+
+            <!-- Description List -->
+
+            <h3>Description List</h3>
+
+            <dl>
+
+                <dt>HTML</dt>
+
+                <dd>
+                    HyperText Markup Language
+                </dd>
+
+
+                <dt>CSS</dt>
+
+                <dd>
+                    Cascading Style Sheets
+                </dd>
+
+
+                <dt>JavaScript</dt>
+
+                <dd>
+                    Programming Language
+                </dd>
+
+            </dl>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= TABLE ================= -->
+
+        <section id="table">
+
+            <h2>HTML Table</h2>
+
+
+            <table border="1"
+                   cellpadding="10"
+                   cellspacing="0">
+
+
+                <!-- Caption -->
+
+                <caption>
+                    Student Information
+                </caption>
+
+
+                <!-- Table Head -->
+
+                <thead>
+
+                    <tr>
+
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <!-- Table Body -->
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+                        <td>Rahul</td>
+                        <td>BCA</td>
+                        <td>85</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>2</td>
+                        <td>Amit</td>
+                        <td>BCA</td>
+                        <td>90</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>3</td>
+                        <td>Raj</td>
+                        <td>BCA</td>
+                        <td>80</td>
+
+                    </tr>
+
+                </tbody>
+
+
+                <!-- Table Footer -->
+
+                <tfoot>
+
+                    <tr>
+
+                        <td colspan="3">
+                            Average
+                        </td>
+
+                        <td>85</td>
+
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= FORM ================= -->
+
+        <section id="form">
+
+            <h2>Student Registration Form</h2>
+
+
+            <form>
+
+
+                <!-- Text -->
+
+                <label for="name">
+                    Name:
+                </label>
+
+                <input type="text"
+                       id="name"
+                       name="name">
+
+                <br><br>
+
+
+
+                <!-- Email -->
+
+                <label for="email">
+                    Email:
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email">
+
+                <br><br>
+
+
+
+                <!-- Password -->
+
+                <label for="password">
+                    Password:
+                </label>
+
+                <input type="password"
+                       id="password"
+                       name="password">
+
+                <br><br>
+
+
+
+                <!-- Number -->
+
+                <label for="age">
+                    Age:
+                </label>
+
+                <input type="number"
+                       id="age"
+                       name="age">
+
+                <br><br>
+
+
+
+                <!-- Date -->
+
+                <label for="dob">
+                    Date of Birth:
+                </label>
+
+                <input type="date"
+                       id="dob"
+                       name="dob">
+
+                <br><br>
+
+
+
+                <!-- Time -->
+
+                <label for="time">
+                    Time:
+                </label>
+
+                <input type="time"
+                       id="time"
+                       name="time">
+
+                <br><br>
+
+
+
+                <!-- Date Time -->
+
+                <label for="datetime">
+                    Date & Time:
+                </label>
+
+                <input type="datetime-local"
+                       id="datetime"
+                       name="datetime">
+
+                <br><br>
+
+
+
+                <!-- Month -->
+
+                <label for="month">
+                    Month:
+                </label>
+
+                <input type="month"
+                       id="month"
+                       name="month">
+
+                <br><br>
+
+
+
+                <!-- Week -->
+
+                <label for="week">
+                    Week:
+                </label>
+
+                <input type="week"
+                       id="week"
+                       name="week">
+
+                <br><br>
+
+
+
+                <!-- Radio -->
+
+                <label>
+                    Gender:
+                </label>
+
+                <input type="radio"
+                       name="gender"
+                       value="male">
+
+                Male
+
+                <input type="radio"
+                       name="gender"
+                       value="female">
+
+                Female
+
+                <br><br>
+
+
+
+                <!-- Checkbox -->
+
+                <label>
+                    Hobbies:
+                </label>
+
+                <input type="checkbox"
+                       name="hobby"
+                       value="gaming">
+
+                Gaming
+
+
+                <input type="checkbox"
+                       name="hobby"
+                       value="music">
+
+                Music
+
+
+                <input type="checkbox"
+                       name="hobby"
+                       value="reading">
+
+                Reading
+
+                <br><br>
+
+
+
+                <!-- SELECT AND OPTION -->
+
+                <label for="course">
+                    Select Course:
+                </label>
+
+                <select id="course"
+                        name="course">
+
+                    <option value="">
+                        -- Select Course --
+                    </option>
+
+                    <option value="bca">
+                        BCA
+                    </option>
+
+                    <option value="bba">
+                        BBA
+                    </option>
+
+                    <option value="bsc">
+                        B.Sc
+                    </option>
+
+                    <option value="bcom">
+                        B.Com
+                    </option>
+
+                    <option value="mca">
+                        MCA
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+
+                <!-- Multiple Selection -->
+
+                <label for="skills">
+                    Select Skills:
+                </label>
+
+                <select id="skills"
+                        name="skills"
+                        multiple>
+
+                    <option value="html">
+                        HTML
+                    </option>
+
+                    <option value="css">
+                        CSS
+                    </option>
+
+                    <option value="javascript">
+                        JavaScript
+                    </option>
+
+                    <option value="python">
+                        Python
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+
+                <!-- Color -->
+
+                <label for="color">
+                    Favorite Color:
+                </label>
+
+                <input type="color"
+                       id="color">
+
+                <br><br>
+
+
+
+                <!-- Range -->
+
+                <label for="range">
+                    Skill Level:
+                </label>
+
+                <input type="range"
+                       id="range"
+                       min="0"
+                       max="100">
+
+                <br><br>
+
+
+
+                <!-- File -->
+
+                <label for="file">
+                    Upload File:
+                </label>
+
+                <input type="file"
+                       id="file">
+
+                <br><br>
+
+
+
+                <!-- Telephone -->
+
+                <label for="phone">
+                    Mobile:
+                </label>
+
+                <input type="tel"
+                       id="phone">
+
+                <br><br>
+
+
+
+                <!-- URL -->
+
+                <label for="website">
+                    Website:
+                </label>
+
+                <input type="url"
+                       id="website">
+
+                <br><br>
+
+
+
+                <!-- Search -->
+
+                <label for="search">
+                    Search:
+                </label>
+
+                <input type="search"
+                       id="search">
+
+                <br><br>
+
+
+
+                <!-- Textarea -->
+
+                <label for="address">
+                    Address:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="5"
+                    cols="40">
+                </textarea>
+
+                <br><br>
+
+
+
+                <!-- Hidden -->
+
+                <input type="hidden"
+                       name="student_id"
+                       value="101">
+
+
+
+                <!-- Submit -->
+
+                <input type="submit"
+                       value="Submit">
+
+
+                <!-- Reset -->
+
+                <input type="reset"
+                       value="Reset">
+
+
+                <!-- Button -->
+
+                <input type="button"
+                       value="Click Me">
+
+            </form>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= MEDIA ================= -->
+
+        <section id="media">
+
+            <h2>Audio and Video</h2>
+
+
+            <!-- Audio -->
+
+            <h3>Audio</h3>
+
+            <audio controls>
+
+                <source src="audio.mp3"
+                        type="audio/mpeg">
+
+                Your browser does not support audio.
+
+            </audio>
+
+
+            <br><br>
+
+
+            <!-- Video -->
+
+            <h3>Video</h3>
+
+            <video width="400"
+                   controls>
+
+                <source src="video.mp4"
+                        type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= SEMANTIC HTML ================= -->
+
+        <section>
+
+            <h2>Semantic HTML</h2>
+
+
+            <article>
+
+                <h3>Article</h3>
+
+                <p>
+                    This is an article.
+                </p>
+
+            </article>
+
+
+            <aside>
+
+                <h3>Aside</h3>
+
+                <p>
+                    This is additional information.
+                </p>
+
+            </aside>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= QUOTATION ================= -->
+
+        <section>
+
+            <h2>Quotation and Abbreviation</h2>
+
+
+            <blockquote>
+
+                HTML is used to create
+                web page structure.
+
+            </blockquote>
+
+
+            <p>
+
+                <q>
+                    Practice makes perfect.
+                </q>
+
+            </p>
+
+
+            <p>
+
+                <abbr title="HyperText Markup Language">
+
+                    HTML
+
+                </abbr>
+
+            </p>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= DETAILS ================= -->
+
+        <section>
+
+            <h2>Details and Summary</h2>
+
+
+            <details>
+
+                <summary>
+                    What is HTML?
+                </summary>
+
+                <p>
+                    HTML is a markup language
+                    used to create web pages.
+                </p>
+
+            </details>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= IFRAME ================= -->
+
+        <section>
+
+            <h2>Iframe</h2>
+
+            <iframe
+                src="https://www.example.com"
+                width="500"
+                height="250"
+                title="Example Website">
+            </iframe>
+
+        </section>
+
+
+        <hr>
+
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact">
+
+            <h2>Contact</h2>
+
+
+            <address>
+
+                Email:
+
+                <a href="mailto:student@example.com">
+
+                    student@example.com
+
+                </a>
+
+                <br>
+
+
+                Phone:
+
+                <a href="tel:+911234567890">
+
+                    +91 1234567890
+
+                </a>
+
+            </address>
+
+        </section>
+
+    </main>
+
+
+    <hr>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 My HTML Website
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
