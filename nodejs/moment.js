@@ -1,13 +1,15 @@
-
+const http = require("http");
 const moment = require("moment");
 
-console.log("Current Date:", moment().format("DD-MM-YYYY"));
-console.log("Current Time:", moment().format("HH:mm:ss"));
+const server = http.createServer((req, res) => {
+  const currentTime = moment().format("DD-MM-YYYY HH:mm:ss");
 
-console.log("Day:", moment().format("dddd"));
-console.log("Month:", moment().format("MMMM"));
-console.log("Year:", moment().format("YYYY"));
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write("<h1>Hello World!</h1>");
+  res.write("<p>Current Date and Time: " + currentTime + "</p>");
+  res.end();
+});
 
-console.log("After 5 Days:", moment().add(5, "days").format("DD-MM-YYYY"));
-console.log("Before 5 Days:", moment().subtract(5, "days").format("DD-MM-YYYY"));
-```
+server.listen(3000, () => {
+  console.log("Server running at http://localhost:3000");
+});
