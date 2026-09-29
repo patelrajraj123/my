@@ -18,6 +18,7 @@ server.listen(3000, () => {
 
 
 
+
 const http = require("http");
 
 const html = `
@@ -178,17 +179,14 @@ function checkAge() {
 </html>
 `;
 
-const server = http.createServer(function(req, res) {
+http.createServer(function (req, res) {
 
-    res.writeHead(200, {
-        "Content-Type": "text/html"
-    });
+res.writeHead(200, {'Content-Type': 'text/html'});
 
-    res.end(html);
+res.end(html);
 
-});
+}).listen(8080);
 
-server.listen(3000, function() {
-    console.log("Server running at http://localhost:3000");
-});
+
+
 
