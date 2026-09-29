@@ -17,7 +17,9 @@ server.listen(3000, () => {
 
 
 
+
 const http = require("http");
+
 const html = `
 <!DOCTYPE html>
 <html>
@@ -76,6 +78,7 @@ const html = `
             padding: 10px;
             background: navy;
             color: white;
+            border: none;
         }
     </style>
 </head>
@@ -88,13 +91,13 @@ const html = `
 </header>
 
 <nav>
-    <a href="/">Home</a>
+    <a href="#home">Home</a>
     <a href="#candidate">Candidate</a>
     <a href="#result">Result</a>
     <a href="#eligibility">Eligibility</a>
 </nav>
 
-<div class="box">
+<div class="box" id="home">
     <h2>Homepage</h2>
     <p>Welcome to Election Commission Website.</p>
 </div>
@@ -158,17 +161,17 @@ const html = `
 </div>
 
 <script>
-    function checkAge() {
-        var age = document.getElementById("age").value;
+function checkAge() {
+    var age = document.getElementById("age").value;
 
-        if (age >= 18) {
-            document.getElementById("resultMessage").innerHTML =
-            "You are eligible to vote.";
-        } else {
-            document.getElementById("resultMessage").innerHTML =
-            "You are not eligible to vote.";
-        }
+    if (age >= 18) {
+        document.getElementById("resultMessage").innerHTML =
+        "You are eligible to vote.";
+    } else {
+        document.getElementById("resultMessage").innerHTML =
+        "You are not eligible to vote.";
     }
+}
 </script>
 
 </body>
@@ -182,8 +185,10 @@ const server = http.createServer(function(req, res) {
     });
 
     res.end(html);
+
 });
 
 server.listen(3000, function() {
     console.log("Server running at http://localhost:3000");
 });
+
