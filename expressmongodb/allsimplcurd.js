@@ -5,12 +5,9 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-// 1. Connect MongoDB
 mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
-
-// 2. Create Student Model
 const Student = mongoose.model("Student", {
   name: String,
   email: String,
@@ -18,18 +15,14 @@ const Student = mongoose.model("Student", {
   course: String
 });
 
-// 3. Home Page - Read Students
 app.get("/", async (req, res) => {
   const students = await Student.find();
-
   let html = `
     <h2>Student Registration</h2>
-
     <form action="/add" method="POST">
       <input name="name" placeholder="Name" required>
       <input name="email" type="email" placeholder="Email" required>
       <input name="age" type="number" placeholder="Age" required>
-
       <select name="course" required>
         <option value="">Select Course</option>
         <option>BCA</option>
@@ -37,10 +30,8 @@ app.get("/", async (req, res) => {
         <option>B.Tech</option>
         <option>MCA</option>
       </select>
-
       <button type="submit">Register</button>
     </form>
-
     <h2>Student List</h2>
     <table border="1" cellpadding="10">
       <tr>
@@ -51,7 +42,6 @@ app.get("/", async (req, res) => {
         <th>Actions</th>
       </tr>
   `;
-
   students.forEach(student => {
     html += `
       <tr>
@@ -61,7 +51,6 @@ app.get("/", async (req, res) => {
         <td>${student.course}</td>
         <td>
           <a href="/edit/${student._id}">Edit</a>
-
           <form action="/delete/${student._id}"
                 method="POST"
                 style="display:inline">
@@ -71,25 +60,19 @@ app.get("/", async (req, res) => {
       </tr>
     `;
   });
-
   html += "</table>";
-
   res.send(html);
 });
 
-// 4. CREATE - Add Student
 app.post("/add", async (req, res) => {
   await Student.create(req.body);
   res.redirect("/");
 });
 
-// 5. UPDATE - Show Edit Form
 app.get("/edit/:id", async (req, res) => {
   const student = await Student.findById(req.params.id);
-
   res.send(`
     <h2>Edit Student</h2>
-
     <form action="/update/${student._id}" method="POST">
       <input name="name" value="${student.name}" required>
       <input name="email" type="email"
@@ -97,27 +80,25 @@ app.get("/edit/:id", async (req, res) => {
       <input name="age" type="number"
              value="${student.age}" required>
       <input name="course" value="${student.course}" required>
-
       <button type="submit">Update</button>
     </form>
-
     <a href="/">Back</a>
   `);
 });
 
-// 6. UPDATE - Save Changes
 app.post("/update/:id", async (req, res) => {
   await Student.findByIdAndUpdate(req.params.id, req.body);
   res.redirect("/");
 });
 
-// 7. DELETE - Remove Student
 app.post("/delete/:id", async (req, res) => {
   await Student.findByIdAndDelete(req.params.id);
   res.redirect("/");
 });
 
-
+app.listen(3000, () => {
+  console.log("Server running at http://localhost:3000");
+});
 
 
 
@@ -126,20 +107,15 @@ app.post("/delete/:id", async (req, res) => {
 
 const express = require("express");
 const mongoose = require("mongoose");
-
 const app = express();
-
 app.use(express.json());
-
 mongoose.connect("mongodb://127.0.0.1:27017/college")
 .then(() => console.log("MongoDB Connected"));
-
 const Student = mongoose.model("Student", {
     name: String,
     roll: Number,
     age: Number
 });
-
 app.get("/add", async (req, res) => {
     await Student.create({
         name: "Raj",
@@ -148,12 +124,10 @@ app.get("/add", async (req, res) => {
     });
     res.send("Student Inserted");
 });
-
 app.get("/students", async (req, res) => {
     const data = await Student.find();
     res.json(data);
 });
-
 app.get("/update", async (req, res) => {
     await Student.updateOne(
         { roll: 101 },
@@ -161,19 +135,11 @@ app.get("/update", async (req, res) => {
     );
     res.send("Student Updated");
 });
-
 app.get("/delete", async (req, res) => {
     await Student.deleteOne({ roll: 101 });
     res.send("Student Deleted");
 });
-
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
 
-
-
-// 8. Start Server
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
-});
